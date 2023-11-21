@@ -1,13 +1,114 @@
+@import-normalize;
+
+@font-face {
+  font-family: 'PacificoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PacificoRegular'),
+    url(./fonts/Pacifico-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoLight'),
+    url(./fonts/Roboto/Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoRegular'),
+    url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoMedium'),
+    url(./fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoBold'),
+    url(./fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+:root {
+  /* Fonts */
+  --primary-light: 'RobotoLight', sans-serif;
+  --primary-regular: 'RobotoRegular', sans-serif;
+  --primary-medium: 'RobotoMedium', sans-serif;
+  --primary-semibold: 'RobotoSemibold', sans-serif;
+  --primary-bold: 'RobotoBold', sans-serif;
+
+  --secondary-regular: 'PacificoRegular', sans-serif;
+
+  /* Colors */
+  --nav-color: #ffd700;
+  --nav-hover-color: #fc5c5c;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'RobotoLight', 'RobotoRegular', 'RobotoMedium', 'RobotoBold', 'PacificoRegular', 
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  background-color: var(--dark-mode-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

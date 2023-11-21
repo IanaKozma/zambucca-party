@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { About } from "./pages/About/About";
 import { Events } from "./pages/Events/Events";
@@ -9,7 +9,7 @@ import './App.css';
 
 export const App = () => {
   return (
-    <Routes>
+    <Routes basename="/zambucca-party">
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />

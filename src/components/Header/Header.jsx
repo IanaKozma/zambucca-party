@@ -1,13 +1,13 @@
+import logo from '../../images/logo.png';
 import { navLinks } from "../NavMenu";
-import { NavLink } from "react-router-dom";
-import { Container } from "./Header.styled";
+import { Container, HeaderImg, NavMenu, Link } from "./Header.styled";
 
 export const Header = () => {
     const NavBar = () => {
         return (
             <nav>
                 {navLinks.map(({ to, label }) => (
-                    <NavLink key={to} to={to}>{label}</NavLink>
+                    <Link key={to} to={to}>{label}</Link>
                 ))}
             </nav>
         );
@@ -17,7 +17,11 @@ export const Header = () => {
         <>
             <header>
                 <Container>
-                    {NavBar()}
+                        
+                        <NavMenu>
+                            {NavBar()}
+                        </NavMenu>
+                    <HeaderImg src={logo} alt="Logo" />
                 </Container>
             </header>
         </>
